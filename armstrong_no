@@ -1,0 +1,14 @@
+    string armstrongNumber(int n){
+        // code here
+        int p=n,s=0,d=0;
+        while(n!=0)
+        {
+            d=n%10;
+            s=s+(d*d*d);
+            n=n/10;
+        }
+        if(p==s)
+           return "Yes";
+        else
+            return "No";
+    }
