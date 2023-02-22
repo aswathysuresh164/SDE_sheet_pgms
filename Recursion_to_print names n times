@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+void printname(int i,int n)
+{
+    if(i>n)
+      return;
+    else
+      cout<<"Aswathy\n";
+      printname(++i,n);
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    printname(1,n);
+
+    return 0;
+}
