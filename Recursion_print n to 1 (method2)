@@ -1,0 +1,26 @@
+
+
+#include <iostream>
+using namespace std;
+
+void printn(int i,int n){
+   if(i<1)
+      return;
+   else
+    {
+        
+        cout<<i;
+        --i;
+        printn(i,n);
+    }
+}   
+
+int main()
+{
+    cout<<"Hello World";
+    int n;
+    cin>>n;
+    printn(n,n);
+
+    return 0;
+}
