@@ -1,0 +1,10 @@
+bool reverse(int i,int a[],int n)
+{
+
+   if(i>=n/2) 
+     {return true;}
+   if(a[i]!=a[n-i-1])
+      { return false;}
+   
+   return reverse(i+1,a,n); 
+}
