@@ -8,17 +8,15 @@ int main()
    int n;
    cin>>n;
    int a[n];
+    unordered_map<int,int> mpp;
    for(int i=0;i<n;i++)
    {
        cin>>a[i]; //read the array values
+        mpp[a[i]]++; //precompution done with this loop
    }
-    //precompute
-    unordered_map<int,int> mpp;
-    for(int i=0;i<n;i++)
-    {
-        mpp[a[i]]++;
     
-    }
+   
+    
     //read no of testcases
     int t;
     cin>>t;
