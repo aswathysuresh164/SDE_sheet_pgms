@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"charater hashing\n";
+    string s="hello world";
+    //precompute
+int hash[26]={0};
+    for(int i=0;i<s.size();i++)
+    {
+        hash[s[i]-'a']++;
+    
+    }
+    //read no of testcases
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        char c;
+        cin>>c;
+        cout<<c<<"occurs "<<hash[c-'a']<<"times\n";
+        
+    }
+
+    return 0;
+}
