@@ -1,0 +1,42 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"number hashing\n";
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    
+    int hash[n+1]={0};//precomputing
+     for(int i=0;i<n;i++)
+        {
+            hash[a[i]]++;
+        }
+        
+    int t;
+    cin>>t;
+    while(t--) //taking numbers to count
+    {  
+        int num;
+        cin>>num;
+       
+        cout<<num<<"occurs at "<<hash[num]<<"times\n";
+        
+    }
+
+    return 0;
+}
