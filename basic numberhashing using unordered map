@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    cout<<"number hashing using map\n";
+   int n;
+   cin>>n;
+   int a[n];
+   for(int i=0;i<n;i++)
+   {
+       cin>>a[i]; //read the array values
+   }
+    //precompute
+    unordered_map<int,int> mpp;
+    for(int i=0;i<n;i++)
+    {
+        mpp[a[i]]++;
+    
+    }
+    //read no of testcases
+    int t;
+    cin>>t;
+    while(t--)
+    {
+       int num;
+        cin>>num;
+        cout<<num<<"occurs "<<mpp[num]<<"times\n";
+        
+    }
+
+    return 0;
+}
