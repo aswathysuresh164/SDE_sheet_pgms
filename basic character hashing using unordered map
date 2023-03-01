@@ -1,0 +1,30 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    cout<<"character hashing using map\n";
+   string s;
+   cin>>s;
+   
+   unordered_map<char,int> mpp;
+   for(int i=0;i<s.size();i++)
+   {
+        //read the array values
+       mpp[s[i]]++;
+   }
+    
+    //read no of testcases
+    int t;
+    cin>>t;
+    while(t--)
+    {
+         char c;
+        cin>>c;
+        cout<<c<<" occurs "<<mpp[c]<<"times\n";
+        
+    }
+
+   
