@@ -1,0 +1,6 @@
+ void sort012(int a[], int n)
+    {
+        // code here 
+        sort(a,a+n);//where n is the size of the array
+    }
+    
