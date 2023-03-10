@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+void insertionsort(int n,int ar[])
+{
+    int j,temp=0;
+    for(int i=0;i<=n-1;i++)
+    {
+        
+        int j=i;
+        while(j>0&&ar[j-1]>ar[j])
+        {
+            temp=ar[j-1];
+            ar[j-1]=ar[j];
+            ar[j]=temp; 
+                        //swap here
+            j--;
+        }
+        
+    }
+    
+}
+
+int main()
+{
+    cout<<"Hello World";
+    int ar[6]={1,4,7,3,14,5};
+    int n=6;
+    insertionsort(n,ar);
+    for(int i=0;i<n;i++)
+    {
+        cout<<ar[i]<<" ";
+    }
+
+    return 0;
+}
