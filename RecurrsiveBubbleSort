@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void Bubblesort(int a[],int n)
+{  
+    int count=0;
+    int temp=0;
+    if(n==1)
+       return;
+    for(int i=0;i<n-i-1;i++)
+    {
+        if(a[i]<a[i-1])
+          {
+               temp=a[i];
+                a[i]=a[i-1];
+                a[i-1]=temp;
+                count++;
+          }
+        
+    }
+    if(count==0)
+      return;
+    Bubblesort(a,n-1);
+}
+
+int main()
+{
+    cout<<"Recursive Bubblesort";
+    int arr[7]={4,0,2,5,11,99,77};
+    Bubblesort(arr,7);
+    for(int i=0;i<7;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+    return 0;
+}
